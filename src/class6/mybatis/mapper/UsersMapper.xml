@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="users">
+
+	<!-- 자주 사용하는 'sql 문장'을 미리 정의해 놓기 -->
+	<sql id="userColumns">
+		userId, userName, userPwd, userLevel, userEmail, userPhone, companyNo, regDate
+	</sql>
+
+	<select id="isValid" parameterType="usersDto" resultType="usersDto">
+		SELECT userId, userPwd FROM users
+		 WHERE userId=#{userId} AND userPwd=#{userPwd}
+	</select>
+
+	<select id="isExistId" parameterType="string" resultType="string">
+		SELECT userId FROM users
+		 WHERE userId=#{userId}
+	</select>
+	
+	<select id="getCount" resultType="int">
+		SELECT NVL(MAX(ROWNUM), 0)
+		  FROM users
+	</select>
+		
+	<select id="getData" parameterType="string" resultType="usersDto">
+		SELECT <include refid="userColumns"/>
+		  FROM users
+		 WHERE userId=#{userId}
+	</select>
+	
+	<select id="getList" resultType="usersDto">
+		SELECT <include refid="userColumns"/>
+		  FROM users
+		 ORDER BY name ASC
+	</select>
+
+	<insert id="insert" parameterType="usersDto">
+		INSERT INTO users 
+				(userId, userName, userPwd, userLevel, 
+				 userEmail, userPhone, companyNo, regDate)
+		VALUES (#{userId}, #{userName}, #{userPwd}, #{userLevel}, 
+				#{userEmail}, #{userPhone}, #{companyNo}, SYSDATE)
+	</insert>
+	
+	<update id="update" parameterType="usersDto">
+		UPDATE users
+		   SET userName=#{userName}, userPwd=#{userPwd}, userLevel=#{userLevel}, 
+		       userEmail=#{userEmail}, userPhone=#{userPhone}, 
+		       companyNo=#{companyNo}, regDate=SYSDATE
+		 WHERE userId=#{userId}
+	</update>
+	
+	<delete id="delete" parameterType="string">
+		DELETE FROM users WHERE userId=#{userId}
+	</delete>
+</mapper>
