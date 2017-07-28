@@ -53,17 +53,3 @@ public class EncodingFilter implements Filter{
 		myEncoding=config.getInitParameter("myEncoding");
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
