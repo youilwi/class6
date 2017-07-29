@@ -31,7 +31,7 @@
 				<ul class="dropdown-menu">
 					<li><a href="${pageContext.request.contextPath }/member/memberList.do">회훤 리스트 보기</a></li>
 					<li><a href="${pageContext.request.contextPath }/member/memberUpdateForm.do">회원 정보 수정</a></li>
-					<li><a href="${pageContext.request.contextPath }/member/memberDeleteForm.do">회원 정보 등록</a></li>
+					<li><a href="${pageContext.request.contextPath }/member/memberDeleteForm.do">회원 정보 삭제</a></li>
 					<li><a href="${pageContext.request.contextPath }/member/memberInsertForm.do">회원 정보 등록</a></li>
 				</ul>
 			</li>
