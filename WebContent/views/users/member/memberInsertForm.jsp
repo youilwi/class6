@@ -8,7 +8,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	
-	<title>/views/users/joinForm.jsp</title>
+	<title>views/users/join/memberInsertForm.jsp</title>
 	
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/resource/css/bootstrap.css"/>
 	<script src="${pageContext.request.contextPath }/resource/js/jquery-3.2.0.js"></script>
@@ -49,9 +49,10 @@
 					<tbody>
 						<tr>
 							<td><label for="userId">아이디</label></td>
-							<td colspan="2">
+							<td>
 								<input type="text" class="form-control" id="userId" name="userId" />
 							</td>
+							<td><button>확인</button></td>
 						</tr>
 						
 						<tr>
@@ -73,7 +74,14 @@
 							<td colspan="2">
 								<input type="text" class="form-control" id="userName" name="userName" />
 							</td>
-						</tr>						
+						</tr>
+						
+						<tr>
+							<td><label for="userLevel">등급</label></td>
+							<td colspan="2">
+								<input type="text" class="form-control" id="userLevel" name="userLevel" readonly />
+							</td>
+						</tr>					
 
 						<tr>
 							<td><label for="userEmail">이메일</label></td>

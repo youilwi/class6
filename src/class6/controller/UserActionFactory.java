@@ -1,14 +1,25 @@
 package class6.controller;
 
 import class6.action.HomeAction;
+import class6.company.action.CompanyDeleteAction;
 import class6.company.action.CompanyInsertAction;
 import class6.company.action.CompanyInsertFormAction;
 import class6.company.action.CompanyListAction;
+import class6.company.action.CompanyUpdateAction;
+import class6.company.action.CompanyUpdateFormAction;
+import class6.join.action.CheckIdFormAction;
+import class6.join.action.JoinAgreeFormAction;
 import class6.join.action.UsersJoinAction;
 import class6.join.action.UsersJoinFormAction;
 import class6.login.action.LoginAction;
 import class6.login.action.LoginFormAction;
 import class6.login.action.LogoutAction;
+import class6.member.action.MemberDeleteAction;
+import class6.member.action.MemberInsertAction;
+import class6.member.action.MemberInsertFormAction;
+import class6.member.action.MemberListAction;
+import class6.member.action.MemberUpdateAction;
+import class6.member.action.MemberUpdateFormAction;
 
 public class UserActionFactory {
 	private static UserActionFactory factory;
@@ -28,10 +39,14 @@ public class UserActionFactory {
 		
 		if(command.equals("/home")){
 			action=new HomeAction();
-		}else if(command.equals("/users/join/memberInsertForm")){
+		}else if(command.equals("/users/join/usersJoinForm")){
 			action=new UsersJoinFormAction();
-		}else if(command.equals("/users/join/memberInsert")){
+		}else if(command.equals("/users/join/usersJoin")){
 			action=new UsersJoinAction();
+		}else if(command.equals("/users/join/joinAgreeForm")){
+			action=new JoinAgreeFormAction();
+		}else if(command.equals("/users/join/checkIdForm")){
+			action=new CheckIdFormAction();
 		}else if(command.equals("/users/login/loginForm")){
 			action=new LoginFormAction();
 		}else if(command.equals("/users/login/login")){
@@ -44,6 +59,24 @@ public class UserActionFactory {
 			action=new CompanyInsertAction();
 		}else if(command.equals("/company/companyList")){
 			action=new CompanyListAction();
+		}else if(command.equals("/company/companyUpdateForm")){
+			action=new CompanyUpdateFormAction();
+		}else if(command.equals("/company/companyUpdate")){
+			action=new CompanyUpdateAction();
+		}else if(command.equals("/company/companyDelete")){
+			action=new CompanyDeleteAction();
+		}else if(command.equals("/member/memberList")){
+			action=new MemberListAction();
+		}else if(command.equals("/member/memberInsertForm")){
+			action=new MemberInsertFormAction();
+		}else if(command.equals("/member/memberInsert")){
+			action=new MemberInsertAction();
+		}else if(command.equals("/member/memberUpdateForm")){
+			action=new MemberUpdateFormAction();
+		}else if(command.equals("/member/memberUpdate")){
+			action=new MemberUpdateAction();
+		}else if(command.equals("/member/memberDelete")){
+			action=new MemberDeleteAction();
 		}
 		
 		return action;

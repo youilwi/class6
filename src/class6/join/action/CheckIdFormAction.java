@@ -7,7 +7,7 @@ import class6.controller.Action;
 import class6.controller.ActionForward;
 import class6.users.dao.UsersDao;
 
-public class CheckIdAction extends Action{
+public class CheckIdFormAction extends Action{
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {

@@ -43,14 +43,21 @@ public class CompanyDao {
 		}
 	}
 	
-	public void delete(int num){
+	public boolean delete(int num){
 		SqlSession session=factory.openSession(true);
+		int rowCount = 0;
 		try{
-			session.insert("company.delete", num);
+			rowCount = session.insert("company.delete", num);
 		}catch(Exception e){
 			e.printStackTrace();
 		}finally{
 			session.close();
+		}
+		
+		if(rowCount>0){
+			return true;
+		}else{
+			return false;
 		}
 	}
 	

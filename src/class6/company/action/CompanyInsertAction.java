@@ -13,7 +13,7 @@ public class CompanyInsertAction extends Action{
 	@Override
 	public ActionForward execute(HttpServletRequest request, 
 								HttpServletResponse response) {
-		System.out.println(":: CompanyInsertAction start..");
+		// System.out.println(":: CompanyInsertAction start..");
 		
 		CompanyDto dto = new CompanyDto();
 		dto.setCompanyName(request.getParameter("companyName"));
@@ -23,7 +23,7 @@ public class CompanyInsertAction extends Action{
 		CompanyDao.getInstance().insert(dto);
 		
 		request.setAttribute("msg", "회사가 등록 되었습니다.");
-		request.setAttribute("url", request.getContextPath());		
+		request.setAttribute("url", "companyList.do");		
 		
 		return new ActionForward("/views/alert.jsp");
 	}

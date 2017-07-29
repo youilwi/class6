@@ -6,19 +6,19 @@ public class CompanyDto {
 	private String companyAddr;		// 회사 주소
 	private String companyCeo;		// 대표자 이름
 	private String ceoPhone;		// 회사 전화번호
-	private String refDate;			// 등록 일자
+	private String regDate;			// 등록 일자	
 	
 	public CompanyDto(){}
 	
 	public CompanyDto(int companyNo, String companyName, String companyAddr, 
-			String companyCeo, String ceoPhone, String refDate) {
+			String companyCeo, String ceoPhone, String regDate) {
 		super();
 		this.companyNo = companyNo;
 		this.companyName = companyName;
 		this.companyAddr = companyAddr;
 		this.companyCeo = companyCeo;
 		this.ceoPhone = ceoPhone;
-		this.refDate = refDate;
+		this.regDate = regDate;
 	}
 	
 	public int getCompanyNo() {
@@ -51,10 +51,10 @@ public class CompanyDto {
 	public void setCeoPhone(String ceoPhone) {
 		this.ceoPhone = ceoPhone;
 	}
-	public String getRefDate() {
-		return refDate;
+	public String getRegDate() {
+		return regDate;
 	}
-	public void setRefDate(String refDate) {
-		this.refDate = refDate;
+	public void setRegDate(String regDate) {
+		this.regDate = regDate;
 	}
 }

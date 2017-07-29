@@ -8,13 +8,14 @@ public class UsersDto {
 	private String userEmail;		// 이메일
 	private String userPhone;		// 핸드폰 번호
 	private String companyNo;		// 회사 번호
+	private String companyNname;	// 회사 이름
 	private String regDate;			// 가입 일자
 	
 	public UsersDto(){ }
 	
 	public UsersDto(String userId, String userName, String userPwd, 
 			String userLevel, String userEmail, String userPhone, 
-			String companyNo, String regDate) {
+			String companyNo, String companyNname, String regDate) {
 		super();
 		this.userId = userId;
 		this.userName = userName;
@@ -23,6 +24,7 @@ public class UsersDto {
 		this.userEmail = userEmail;
 		this.userPhone = userPhone;
 		this.companyNo = companyNo;
+		this.companyNname = companyNname;
 		this.regDate = regDate;
 	}
 	
@@ -67,6 +69,12 @@ public class UsersDto {
 	}
 	public void setCompanyNo(String companyNo) {
 		this.companyNo = companyNo;
+	}
+	public String getCompanyNname() {
+		return companyNname;
+	}
+	public void setCompanyNname(String companyNname) {
+		this.companyNname = companyNname;
 	}
 	public String getRegDate() {
 		return regDate;

@@ -8,7 +8,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	
-	<title>/views/company/companyInsertForm.jsp</title>
+	<title>views/company/companyInsertForm.jsp</title>
 	
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/resource/css/bootstrap.css"/>
 	<script src="${pageContext.request.contextPath }/resource/js/jquery-3.2.0.js"></script>

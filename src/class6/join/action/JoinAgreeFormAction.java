@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import class6.controller.Action;
 import class6.controller.ActionForward;
 
-public class AgreeAction extends Action{
+public class JoinAgreeFormAction extends Action{
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {

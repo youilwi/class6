@@ -8,7 +8,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	
-	<title>views/company/companyList.jsp</title>
+	<title>views/users/join/memberList.jsp</title>
 	
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/resource/css/bootstrap.css"/>
 	<script src="${pageContext.request.contextPath }/resource/js/jquery-3.2.0.js"></script>
@@ -23,38 +23,40 @@
 
 <body>
 <div class="container col-xs-12">
-	<h3>[ 회사 목록 보기 ]</h3>
+	<h3>[ 화원 목록 보기 ]</h3>
 	
 	<div class="indexTag">
-		<a href="companyInsertForm.do">회사 등록하기</a>
+		<a href="memberInsertForm.do">회원 등록하기</a>
 		<a href="${pageContext.request.contextPath }/home.do">처음으로 가기</a>
 	</div><br />
 
 	<table class="table table-striped">
 		<thead>
 			<tr>
-				<th>No</th>
-				<th>회사명</th>
-				<th>주소</th>
-				<th>CEO명</th>
-				<th>ceo전화</th>
+				<th>아이디</th>
+				<th>이름</th>
+				<th>비밀번호</th>
+				<th>등급</th>
+				<th>이메일</th>
+				<th>핸드폰</th>
+				<th>회사번호</th>
+				<th>회사이름</th>
 				<th>등록일</th>
-				<th>수정</th>
-				<th>삭제</th>
 			</tr>
 		</thead>
 
 		<tbody>
 			<c:forEach var="tmp" items="${list }">
                 <tr>
+					<td>${tmp.userId }</td>
+					<td>${tmp.userName }</td>
+					<td>${tmp.userPwd }</td>
+					<td>${tmp.userLevel }</td>
+					<td>${tmp.userEmail }</td>
+					<td>${tmp.userPhone }</td>
 					<td>${tmp.companyNo }</td>
 					<td>${tmp.companyName }</td>
-					<td>${tmp.companyAddr }</td>
-					<td>${tmp.companyCeo }</td>
-					<td>${tmp.ceoPhone }</td>
-					<td>${tmp.regDate }</td>
-					<td><a href="companyUpdateForm.do?companyNo=${tmp.companyNo }">수정</a></td>
-					<td><a href="companyDelete.do?companyNo=${tmp.companyNo }">삭제</a></td>				
+					<td>${tmp.regDate }</td>			
 				</tr>
 			</c:forEach>
 		</tbody>
