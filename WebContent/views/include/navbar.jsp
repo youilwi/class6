@@ -15,40 +15,41 @@
 		
 		<ul class="nav navbar-nav">
 			<li class="active"><a href="${pageContext.request.contextPath }/home.do">Home</a></li>
-	
+			
 			<li class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Company
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">소식/갤러리
 				<span class="caret"></span></a>
 				<ul class="dropdown-menu">
+					<li><a href="#">공지사항 조회</a></li>
+					<li><a href="#">질의/응답 게시판 조회</a></li>
+					<li><a href="#">갤러리 게시판 조회</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">회원페이지
+				<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="${pageContext.request.contextPath }/member/memberUpdateForm.do">내 정보 수정</a></li>
+					<li><a href="${pageContext.request.contextPath }/company/companyInsertForm.do">우리회사 등록</a></li>
+					<li><a href="${pageContext.request.contextPath }/member/memberDeleteForm.do">회원 탈퇴</a></li>
+				</ul>
+			</li>
+
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">회사 페이지
+				<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="${pageContext.request.contextPath }/company/companyUpdateForm.do">회사 정보 수정</a></li>
 					<li><a href="${pageContext.request.contextPath }/company/companyList.do">회사 리스트 보기</a></li>
-					<li><a href="${pageContext.request.contextPath }/company/companyInsertForm.do">회사 정보 등록</a></li>
 				</ul>
 			</li>
-			
+
 			<li class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Member
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">관리자 페이지
 				<span class="caret"></span></a>
 				<ul class="dropdown-menu">
-					<li><a href="${pageContext.request.contextPath }/member/memberList.do">회훤 리스트 보기</a></li>
-					<li><a href="${pageContext.request.contextPath }/member/memberUpdateForm.do">회원 정보 수정</a></li>
-					<li><a href="${pageContext.request.contextPath }/member/memberDeleteForm.do">회원 정보 삭제</a></li>
-					<li><a href="${pageContext.request.contextPath }/member/memberInsertForm.do">회원 정보 등록</a></li>
-				</ul>
-			</li>
-			
-			<li class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Board
-				<span class="caret"></span></a>
-				<ul class="dropdown-menu">
-					<li><a href="#">게시판 보기</a></li>
-					<li><a href="#">게시판 글 등록하기</a></li>
-					<li><a href="#">갤러리 게시판</a></li>
-				</ul>
-			</li>
-			<li class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Manager
-				<span class="caret"></span></a>
-				<ul class="dropdown-menu">
+					<li><a href="#">공지사항 등록</a></li>
 					<li><a href="#">회사 리스트 보기</a></li>
 					<li><a href="#">회원 리스트 보기</a></li>
 					<li><a href="#">게시판 리스트 보기</a></li>
