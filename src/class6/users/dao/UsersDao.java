@@ -11,7 +11,9 @@ import class6.users.dto.UsersDto;
 public class UsersDao {
 	private static UsersDao dao;
 	private static SqlSessionFactory factory;
+	
 	private UsersDao(){}
+	
 	public static UsersDao getInstance(){
 		if(dao==null){
 			dao=new UsersDao();
