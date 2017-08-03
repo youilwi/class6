@@ -1,4 +1,4 @@
-package class6.member.action;
+package class6.users.main.action;
 
 import java.util.List;
 

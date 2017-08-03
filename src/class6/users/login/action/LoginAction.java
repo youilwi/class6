@@ -1,4 +1,4 @@
-package class6.login.action;
+package class6.users.login.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

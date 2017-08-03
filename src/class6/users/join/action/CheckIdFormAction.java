@@ -1,4 +1,4 @@
-package class6.join.action;
+package class6.users.join.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
